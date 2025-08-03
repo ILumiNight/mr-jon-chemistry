@@ -1,0 +1,111 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+  body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+  }
+  p {text-align: justify;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+#CV {text-align: center}
+  /* Create a Parallax Effect */
+  .bgimg_1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100px;
+    animation: fadeIn 2s;
+  }
+
+  .w3-wide {letter-spacing: 10px;}
+  .w3-hover-opacity {cursor: pointer;}
+
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1600px) {
+    .bgimg_1 {
+      background-attachment: scroll;
+      min-height: 20px;
+    }
+}
+
+/* Fixed navbar at top, highest layer */
+.w3-top {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999 !important;
+  overflow: visible !important; /* allows dropdowns to overflow */
+}
+
+#myNavbar, #navDemo {
+  background-color: white; /* inherit from .w3-top */
+  color: white;
+}
+
+.w3-bar-item, .w3-button {
+  color: black !important;
+}
+
+.w3-bar-item.w3-button:hover {
+  background-color: #003366 !important;
+}
+
+.w3-dropdown-content {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Dropdown menus styling */
+.w3-dropdown-content {
+  position: absolute !important;
+  display: none; /* hide initially */
+  width: 300px !important;
+  max-width: 300px !important;
+  white-space: nowrap !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  z-index: 10000 !important; /* above navbar */
+}
+
+/* Show dropdown on hover */
+.w3-dropdown-hover:hover > .w3-dropdown-content {
+  display: block !important;
+  animation: fadeInDropdown 0.3s ease forwards;
+}
+
+/* Nested dropdown menus */
+.w3-dropdown-content .w3-dropdown-content {
+  left: 100%;
+  top: 0;
+  width: 160px !important;
+  max-width: 160px !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  display: none !important;
+  z-index: 11000 !important; /* above main dropdown */
+}
+
+/* Show nested dropdown on hover */
+.w3-dropdown-content .w3-dropdown-hover:hover > .w3-dropdown-content {
+  display: block !important;
+}
+
+/* Fade in animation for dropdown */
+@keyframes fadeInDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
